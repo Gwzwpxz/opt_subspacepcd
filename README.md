@@ -65,7 +65,7 @@ param.method = "SINF";
 % param.method = "SDP";  
 
 % Generate preconditioning problem. X is the user data
-% Add identity and Jacobian preconditioner
+% Add identity and Jacobian preconditioner to the subspace
 n = size(X, 1);
 param.subspace = [ones(n, 1), full(diag(X))];
 
@@ -85,9 +85,12 @@ Please contact `gwz@stanford.edu` for questions on the toolbox.
 
 **Cite as**
 
-> @article{gao2023scalable,
->   title={Scalable Approximate Optimal Diagonal Preconditioning},
->   author={Gao, Wenzhi and Qu, Zhaonan and Udell, Madeleine and Ye, Yinyu},
->   journal={arXiv preprint arXiv:2312.15594},
->   year={2023}
-> }
+```
+@article{gao2023scalable,
+title={Scalable Approximate Optimal Diagonal Preconditioning},
+author={Gao, Wenzhi and Qu, Zhaonan and Udell, Madeleine and Ye, Yinyu},
+journal={arXiv preprint arXiv:2312.15594},
+year={2023}
+}
+```
+
